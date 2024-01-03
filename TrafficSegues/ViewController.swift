@@ -8,12 +8,35 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var isOn: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    
+    @IBAction func goGreen(_ sender: Any) {
+        if isOn.isOn == true{
+            performSegue(withIdentifier: "Green", sender: nil)
+        }
+        
+    }
+    
+    @IBAction func goPurple(_ sender: Any) {
+        if isOn.isOn == true{
+            performSegue(withIdentifier: "Purple", sender: nil)
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        @IBAction func unwindToRed(unwindSegue: UIStoryboardSegue) { }
+        
+    }
+    
 }
-
